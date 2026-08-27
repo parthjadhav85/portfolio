@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parth Jadhav | Portfolio</title>
+    <meta name="description" content="Portfolio of Parth Jadhav - Computer Science Student & Developer" />
+    <meta name="keywords" content="portfolio, developer, software engineer, web development" />
+    <meta name="author" content="Parth Jadhav" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Parth Jadhav | Portfolio" />
+    <meta property="og:description" content="Computer Science Student & Developer" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fonts: Geist, Geist Mono, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Dark mode preload (default to light if preferred or stored theme) -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Default to light theme as primary Vercel aesthetic, or system preference
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
