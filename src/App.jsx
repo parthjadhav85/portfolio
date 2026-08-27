@@ -13,7 +13,7 @@ import './index.css';
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('theme');
-    return saved ? saved === 'dark' : false; // clean default theme
+    return saved !== null ? saved === 'dark' : true; // default to dark mode on first visit
   });
   const [loading, setLoading] = useState(true);
 

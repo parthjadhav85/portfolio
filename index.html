@@ -26,19 +26,15 @@
       rel="stylesheet"
     />
     
-    <!-- Dark mode preload (default to light if preferred or stored theme) -->
+    <!-- Dark mode preload (default to dark if no stored theme, respect stored choice) -->
     <script>
       (function () {
         const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else if (theme === 'light') {
+        if (theme === 'light') {
           document.documentElement.classList.remove('dark');
         } else {
-          // Default to light theme as primary Vercel aesthetic, or system preference
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-          }
+          // Default to dark mode on first visit or when theme is 'dark'
+          document.documentElement.classList.add('dark');
         }
       })();
     </script>
