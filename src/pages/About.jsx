@@ -1,3 +1,4 @@
+import { LuTrophy, LuHeadphones, LuGamepad2 } from 'react-icons/lu';
 import portfolioData from '../data/portfolio';
 import PageHeader from '../components/PageHeader';
 
@@ -59,72 +60,69 @@ const About = () => {
           </section>
         )}
 
-        {/* 3. Education & Experience Grid */}
-        <div className="about-dual-column-grid">
-          {/* Education */}
-          {education && education.length > 0 && (
-            <section className="about-section-block">
-              <h2 className="section-title-mono">Education</h2>
-              <div className="cards-stack-list">
-                {education.map((item, index) => (
-                  <div key={index} className="about-detail-card">
-                    <div className="about-card-header-flex">
-                      <h3 className="about-card-main-title">{item.degree}</h3>
-                      <span className="about-card-date-badge">{item.period}</span>
-                    </div>
-                    <p className="about-card-org-name">{item.institution}</p>
-                    {item.details && Array.isArray(item.details) ? (
-                      <ul className="about-card-bullet-list">
-                        {item.details.map((detail, idx) => (
-                          <li key={idx}>{detail}</li>
-                        ))}
-                      </ul>
-                    ) : (
-                      item.details && <p className="about-card-plain-text">{item.details}</p>
-                    )}
+        {/* 3. Education */}
+        {education && education.length > 0 && (
+          <section className="about-section-block">
+            <h2 className="section-title-mono">Education</h2>
+            <div className="cards-stack-list">
+              {education.map((item, index) => (
+                <div key={index} className="about-detail-card">
+                  <div className="about-card-header-flex">
+                    <h3 className="about-card-main-title">{item.degree}</h3>
+                    <span className="about-card-date-badge">{item.period}</span>
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
+                  <p className="about-card-org-name">{item.institution}</p>
+                  {item.details && Array.isArray(item.details) ? (
+                    <ul className="about-card-bullet-list">
+                      {item.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    item.details && <p className="about-card-plain-text">{item.details}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
-          {/* Experience */}
-          {experience && experience.length > 0 && (
-            <section className="about-section-block">
-              <h2 className="section-title-mono">Experience</h2>
-              <div className="cards-stack-list">
-                {experience.map((item, index) => (
-                  <div key={index} className="about-detail-card">
-                    <div className="about-card-header-flex">
-                      <h3 className="about-card-main-title">{item.title}</h3>
-                      <span className="about-card-date-badge">{item.period}</span>
-                    </div>
-                    <p className="about-card-org-name">@{item.company}</p>
-                    {item.description && (
-                      <p className="about-card-plain-text">{item.description}</p>
-                    )}
-                    {item.details && Array.isArray(item.details) && (
-                      <ul className="about-card-bullet-list">
-                        {item.details.map((detail, idx) => (
-                          <li key={idx}>{detail}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {item.technologies && (
-                      <div className="journey-tags-list" style={{ marginTop: '0.75rem' }}>
-                        {item.technologies.map((tech) => (
-                          <span key={tech} className="journey-tech-badge">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+        {/* Experience */}
+        {experience && experience.length > 0 && (
+          <section className="about-section-block">
+            <h2 className="section-title-mono">Experience</h2>
+            <div className="cards-stack-list">
+              {experience.map((item, index) => (
+                <div key={index} className="about-detail-card">
+                  <div className="about-card-header-flex">
+                    <h3 className="about-card-main-title">{item.title}</h3>
+                    <span className="about-card-date-badge">{item.period}</span>
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
+                  <p className="about-card-org-name">@{item.company}</p>
+                  {item.description && (
+                    <p className="about-card-plain-text">{item.description}</p>
+                  )}
+                  {item.details && Array.isArray(item.details) && (
+                    <ul className="about-card-bullet-list">
+                      {item.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {item.technologies && (
+                    <div className="journey-tags-list" style={{ marginTop: '0.75rem' }}>
+                      {item.technologies.map((tech) => (
+                        <span key={tech} className="journey-tech-badge">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* 4. Positions of Responsibility */}
         {positionsOfResponsibility && positionsOfResponsibility.length > 0 && (
@@ -166,13 +164,24 @@ const About = () => {
           <section className="about-section-block">
             <h2 className="section-title-mono">Beyond Work</h2>
             <div className="about-3col-grid">
-              {beyondWork.map((hobby, index) => (
-                <div key={index} className="icon-badge-card">
-                  <span className="badge-card-icon">{hobby.emoji}</span>
-                  <h3 className="badge-card-title">{hobby.name}</h3>
-                  <p className="badge-card-subtitle">{hobby.description}</p>
-                </div>
-              ))}
+              {beyondWork.map((hobby, index) => {
+                const renderHobbyIcon = (name) => {
+                  if (name === 'Sports') return <LuTrophy size={26} strokeWidth={1.75} />;
+                  if (name === 'Music') return <LuHeadphones size={26} strokeWidth={1.75} />;
+                  if (name === 'Gaming') return <LuGamepad2 size={26} strokeWidth={1.75} />;
+                  return null;
+                };
+
+                return (
+                  <div key={index} className="icon-badge-card">
+                    <span className="badge-card-icon">
+                      {renderHobbyIcon(hobby.name)}
+                    </span>
+                    <h3 className="badge-card-title">{hobby.name}</h3>
+                    <p className="badge-card-subtitle">{hobby.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}

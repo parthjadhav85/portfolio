@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import portfolioData from '../data/portfolio';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -14,18 +14,53 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+    const EFFECT_DISTANCE = 200;
+
+    const updateScrollProgress = () => {
+      const scrollY = window.scrollY;
+      const progress = Math.min(Math.max(scrollY / EFFECT_DISTANCE, 0), 1);
+
+      if (headerRef.current) {
+        const isDark = document.documentElement.classList.contains('dark');
+        const bgAlpha = (progress * 0.8).toFixed(3);
+        const blurAmount = (progress * 12).toFixed(2);
+        const borderAlpha = (progress * 0.08).toFixed(3);
+
+        const bgColor = isDark
+          ? `rgba(10, 10, 10, ${bgAlpha})`
+          : `rgba(255, 255, 255, ${bgAlpha})`;
+
+        const borderColor = isDark
+          ? `rgba(255, 255, 255, ${borderAlpha})`
+          : `rgba(0, 0, 0, ${borderAlpha})`;
+
+        headerRef.current.style.backgroundColor = bgColor;
+        headerRef.current.style.backdropFilter = `blur(${blurAmount}px)`;
+        headerRef.current.style.webkitBackdropFilter = `blur(${blurAmount}px)`;
+        headerRef.current.style.borderBottomColor = borderColor;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateScrollProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    updateScrollProgress();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [darkMode, location.pathname]);
 
   const logoText = portfolioData.personal.firstName || portfolioData.personal.name;
 
   return (
-    <header className={`site-header ${scrolled ? 'site-header-scrolled' : ''}`}>
+    <header className="site-header" ref={headerRef}>
       <div className="container-custom header-inner">
         {/* Brand Logo on the Far Left */}
         <Link to="/" className="brand-logo" aria-label="Go to Home">

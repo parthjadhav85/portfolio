@@ -31,10 +31,10 @@ const portfolioData = {
     achievementsDriveUrl: 'https://drive.google.com/', // Link to achievements drive
     profileImage: null, // Image URL or null for stylized avatar
     bio: [
-      "Hey, I'm Parth Jadhav — a Computer Science student passionate about building practical, AI-driven, and scalable solutions.",
-      "I explore full-stack web development, GenAI integrations, data systems, and automation, applying my skills through hands-on projects like smart security systems, cloud platforms, and developer tooling.",
-      "I am strengthening my DSA skills via LeetCode and GFG, and enjoy crafting tools that balance usability, performance, and impact.",
-      "Outside tech, I follow sports, vibe to great music, and recharge with creative hobbies."
+      "I am Parth Jadhav, a Computer Science student passionate about building practical software, full-stack applications, backend systems, and data-driven solutions.",
+      "I am currently developing and strengthening my skills across Java, Spring Boot, JavaScript, TypeScript, React, Node.js, relational databases, cloud technologies, and modern developer tooling.",
+      "I learn primarily by building hands-on projects, working with real development tools, and solving problems that balance usability, performance, and clean architecture.",
+      "Outside tech, I follow sports, listen to great music, and recharge with creative hobbies and gaming.",
     ],
   },
 
@@ -55,9 +55,9 @@ const portfolioData = {
   // ===========================================================================
   social: {
     github: 'https://github.com/parthjadhav85',
-    linkedin: 'https://linkedin.com/in/yourusername',
-    leetcode: 'https://leetcode.com/u/yourusername',
-    geeksforgeeks: 'https://geeksforgeeks.org/user/yourusername',
+    linkedin: 'https://www.linkedin.com/in/parthjadhav85/',
+    leetcode: 'https://leetcode.com/u/3eeQeHbIv6/',
+    geeksforgeeks: 'https://www.geeksforgeeks.org/profile/parthjadhav85',
     email: 'mailto:parth.dev.contact@gmail.com',
     phone: 'tel:+91 9321529020',
   },
@@ -68,116 +68,88 @@ const portfolioData = {
   skillCategories: [
     {
       title: 'Programming Languages',
-      skills: ['Python', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL', 'C++',],
+      skills: ['Java', 'JavaScript', 'Python', 'SQL', 'HTML5', 'CSS3', 'TypeScript'],
     },
     {
-      title: 'Frameworks & Libraries',
-      skills: ['React.js', 'OpenCV', 'OCR', 'Node.js', 'Express.js', 'TailwindCSS', 'Tesseract', 'REFramework'],
+      title: 'Frameworks / Runtime',
+      skills: ['Spring Boot', 'Node.js', 'Express', 'React', 'Vite', 'Tailwind CSS'],
     },
     {
-      title: 'Tools & Platforms',
-      skills: ['VS Code', 'GitHub', 'AWS Cloud', 'Dev C++', 'Netlify', 'MongoDB',],
+      title: 'Databases / Data',
+      skills: ['PostgreSQL', 'MySQL', 'Supabase', 'Pandas', 'NumPy'],
     },
     {
-      title: 'Databases',
-      skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'],
+      title: 'Cloud / Deployment',
+      skills: ['AWS', 'Vercel', 'Render'],
     },
     {
-      title: 'Operating Systems',
-      skills: ['Windows', 'Linux', 'Ubuntu'],
+      title: 'Development / Tools',
+      skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'IntelliJ IDEA'],
     },
     {
-      title: 'Soft Skills',
-      skills: [
-        'Leadership',
-        'Team Management',
-        'Problem Solving',
-        'Communication',
-        'Time Management',
-        'Event Organization',
-      ],
+      title: 'Core CS & Operating Systems',
+      skills: ['Data Structures', 'Algorithms', 'DBMS', 'Operating Systems', 'Computer Networks', 'REST APIs', 'Linux', 'Windows'],
     },
   ],
 
   // ===========================================================================
-  // 5. Certifications & Achievements (Skills & About Page)
+  // 5. Certifications & Achievements (Skills Page)
   // ===========================================================================
   certificationsAndAchievements: [
     {
-      title: 'Runner-Up – 2023 Promethean Idea Presentation',
-      organization: 'SIES GST',
-      details: 'Presented innovative technical solution in collegiate competition.',
+      title: 'StashBox — Full-Stack Project Built & Deployed',
+      description: 'Built and deployed StashBox, a full-stack bookmark management platform with React, Express, Supabase/PostgreSQL, authentication, hierarchical collections, metadata extraction, and production deployment.',
     },
     {
-      title: 'AWS Academy Graduate – AWS Cloud Foundations',
-      organization: 'Amazon Web Services',
-      details: 'Completed foundational cloud architecture and deployment curriculum.',
+      title: 'Open-Source Contribution — DevTrack',
+      description: 'Contributed an improvement to the DevTrack open-source project by implementing an empty state for the contribution heatmap when no commits exist in the selected date range.',
     },
     {
-      title: 'Shortlisted Participant – Techxter 14.0 Paper Presentation',
-      organization: 'IETE Students Forum - SIESGST',
-      details: 'Authored and presented research on computer vision and security automation.',
-    },
-    {
-      title: 'Top 5% on LeetCode & GeeksForGeeks',
-      organization: 'Algorithmic Problem Solving',
-      details: '500+ problems solved across data structures, graph theory, and dynamic programming.',
+      title: '1st Rank in Academics — FY 2024–2025',
+      description: 'Ranked 1st in academics during FY 2024–2025.',
     },
   ],
 
   // ===========================================================================
-  // 6. Projects (Projects Page - Matching Reference Screenshot)
+  // 6. Projects (Projects Page)
   // ===========================================================================
   projects: [
     {
-      id: 'criminal-record-management',
-      title: 'Cloud-Based Criminal Record Management System',
-      period: 'Nov 2024 – Jan 2025',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Cloud Computing', 'Database Management', 'Security', 'Web Development'],
-      description: 'Developed a comprehensive cloud-based system for managing criminal records with authentication. The system provides secure access control, data encryption, and real-time synchronization. Implemented role-based authentication and audit trails for enhanced security and compliance.',
-      github: 'https://github.com/yourusername/criminal-record-system',
-      report: 'https://drive.google.com/',
+      id: 'stashbox',
+      title: 'StashBox',
+      period: 'Jul 2026 – Aug 2026',
+      status: 'Completed / Deployed',
+      image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=compress&cs=tinysrgb&w=800',
+      tags: [
+        'React',
+        'Vite',
+        'Tailwind CSS',
+        'Node.js',
+        'Express',
+        'Supabase',
+        'PostgreSQL',
+      ],
+      description: 'StashBox is a full-stack bookmark management platform for saving, organizing, searching, and managing web bookmarks through hierarchical collections. Users can save bookmarks, automatically extract webpage metadata, organize bookmarks into nested collections, search their saved links, and manage favorites and archived bookmarks.',
+      github: 'https://github.com/parthjadhav85/StashBox',
+      live: 'https://stash-box-three.vercel.app/',
     },
     {
-      id: 'smart-society-security',
-      title: 'Smart Society Security System',
-      period: 'Jan 2025 – Apr 2025',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Streamlit', 'OpenCV', 'OCR', 'Machine Learning'],
-      description: 'Developed a comprehensive security system for residential societies using facial recognition and text recognition technologies. The system provides automated access control, visitor management, and security alerts through a Streamlit dashboard. Integrated with cloud storage for secure data management and retrieval.',
-      github: 'https://github.com/yourusername/smart-society-security',
-      report: 'https://drive.google.com/',
-    },
-    {
-      id: 'student-feedback-system',
-      title: 'Online Student Feedback System',
-      period: 'Jun 2024 – Oct 2024',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React.js', 'Database Management'],
-      description: 'Created a responsive feedback platform for educational institutions that enables students to provide anonymous feedback on courses and instructors. The system generates live reports and analytics for administrators. Deployed with real-time data synchronization and comprehensive reporting features.',
-      github: 'https://github.com/yourusername/student-feedback-system',
-      report: 'https://drive.google.com/',
-    },
-    {
-      id: 'home-energy-monitoring',
-      title: 'Home Energy Monitoring System',
-      period: 'Jan 2024 – May 2024',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Arduino IDE', 'Python', 'PHP', 'MySQL'],
-      description: 'Built a real-time energy monitoring system that tracks household power consumption. The system uses Arduino-based sensors to collect data, processes it using Python, and displays analytics through a PHP-based dashboard. Enables users to optimize energy usage and reduce power bills.',
-      github: 'https://github.com/yourusername/home-energy-monitor',
-      report: 'https://drive.google.com/',
-    },
-    {
-      id: 'morse-code-caesar-cipher',
-      title: 'Morse Code & Caesar Cipher ENDEC',
-      period: 'Aug 2023 – Oct 2023',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Arduino', 'C/C++'],
-      description: 'Implemented a hardware-based encoder/decoder for Morse code with additional Caesar Cipher encryption. The system can detect optical Morse signals and translate them to text, as well as convert text input to Morse code output. Provides multiple encryption layers for secure communication.',
-      github: 'https://github.com/yourusername/morse-caesar-endec',
-      report: 'https://drive.google.com/',
+      id: 'subtrack',
+      title: 'SubTrack',
+      period: 'Jul 2026 – Present',
+      status: 'In Development / Under Development',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=compress&cs=tinysrgb&w=800',
+      tags: [
+        'Next.js',
+        'React',
+        'TypeScript',
+        'Supabase',
+        'Tailwind CSS',
+        'Recharts',
+        'Lucide React',
+      ],
+      description: 'SubTrack is a subscription management application currently under development, designed to help users manage and track their recurring subscriptions in one place.',
+      github: 'https://github.com/parthjadhav85/SubTrack',
     },
   ],
 
@@ -186,19 +158,20 @@ const portfolioData = {
   // ===========================================================================
   blogs: [
     {
-      id: 'finding-my-stride-computer-engineering',
-      slug: 'finding-my-stride-computer-engineering',
-      title: 'Finding My Stride: A Computer Engineer’s Journey',
-      date: 'July 12, 2025',
-      readTime: '4 min read',
-      tags: ['Personal Journey', 'Computer Engineering', 'Web Development', 'Growth'],
-      excerpt: 'My journey in Computer Engineering started with uncertainty and self-doubt, but slowly transformed into a story of resilience, learning, and growth. From struggling with the basics to diving deep into web development and forming meaningful connections, here\'s how I found my footing.',
+      id: 'finding-my-way-back',
+      slug: 'finding-my-way-back',
+      title: 'Finding My Way Back',
+      date: 'August 18, 2025',
+      readTime: '2 min read',
+      tags: ['Personal Journey', 'Computer Science', 'Coding', 'Growth'],
+      excerpt: 'Finishing 12th grade came with a setback I wasn\'t prepared for. Here is how staying busy, exploring new interests, and focusing on coding helped me find my direction.',
       content: [
-        'When I began my Computer Engineering degree in 2022, I wasn\'t sure what to expect—or if I even belonged. Every subject felt foreign, and I constantly felt like I was playing catch-up. Everyone seemed to be moving faster, understanding things I couldn\'t yet wrap my head around. I was overwhelmed.',
-        'Despite that, I didn\'t give up. I kept trying. I explored front-end web development out of curiosity—HTML, CSS, a bit of JavaScript. It felt like the first thing that clicked. I still remember the excitement of seeing my first working webpage. That small spark lit a fire.',
-        'By 2023, things started shifting. I made some great friends—people who motivated me, studied with me, and reminded me I wasn\'t alone. Slowly, I began stepping up in academics. I didn\'t become a topper overnight, but I was showing up and staying consistent.',
-        'Then came third year. That\'s when I really went all in. I dove deep into tools and technologies—React, Git, automation, Python, cloud tools, and more. I started building. Small projects, meaningful projects. I also got the opportunity to intern during this time, which added some practical perspective to what I was learning.',
-        'Looking back now, I\'ve come a long way. I may have started unsure, but I\'ve found my stride. Computer Engineering isn\'t just a degree anymore—it\'s part of who I am. And the best part? I know this is just the beginning.',
+        'Finishing 12th grade came with a setback I wasn\'t prepared for. My results were much lower than I had hoped, and for a while, I felt lost and started doubting myself. After spending some time stuck in that disappointment, I realized that thinking about the result wasn\'t going to change anything. I needed to move forward.',
+        'I started keeping myself busy by exploring different things that interested me—YouTube, video editing, scripting, 3D modelling, software tools, and of course, coding. Some interests lasted longer than others, but each one taught me something and helped me stay productive.',
+        'Programming was the one thing I kept coming back to. I had already explored C++ and microcontrollers, and I gradually moved into Python, HTML, CSS, and JavaScript. The more I built, the more I enjoyed solving problems and turning ideas into something real.',
+        'In 2024, I started my BSc in Computer Science at the University of Mumbai. Since then, I have gone deeper into full-stack development, databases, backend technologies, and cloud tools while building projects like StashBox and SubTrack. I have also started exploring open-source development through GitHub.',
+        'Looking back, my 12th-grade result didn\'t magically change, but my perspective did. I realized that one score doesn\'t define what I can become. I kept learning, kept building, and slowly found the direction I wanted to pursue.',
+        'I\'m still learning, still experimenting, and still building—and that\'s what matters to me now.',
       ],
     },
   ],
@@ -227,20 +200,20 @@ const portfolioData = {
     },
     {
       type: 'LinkedIn',
-      value: 'linkedin.com/in/yourusername',
-      link: 'https://linkedin.com/in/yourusername',
+      value: 'linkedin.com/in/parthjadhav85',
+      link: 'https://www.linkedin.com/in/parthjadhav85/',
       icon: 'linkedin',
     },
     {
       type: 'LeetCode',
-      value: 'leetcode.com/u/yourusername',
-      link: 'https://leetcode.com',
+      value: 'leetcode.com/u/3eeQeHbIv6',
+      link: 'https://leetcode.com/u/3eeQeHbIv6/',
       icon: 'code',
     },
     {
       type: 'GeeksForGeeks',
-      value: 'geeksforgeeks.org/user/yourusername',
-      link: 'https://geeksforgeeks.org',
+      value: 'geeksforgeeks.org/profile/parthjadhav85',
+      link: 'https://www.geeksforgeeks.org/profile/parthjadhav85',
       icon: 'terminal',
     },
   ],
@@ -250,81 +223,89 @@ const portfolioData = {
   // ===========================================================================
   journey: [
     {
-      year: '2022',
-      technologies: ['Python', 'SQL'],
-      description: 'Started my programming journey with Python and database fundamentals.',
-    },
-    {
       year: '2023',
-      technologies: ['Python', 'Java', 'C Programming', 'Arduino IDE', 'DSA'],
-      description: 'Began doing DSA as coursework, while implementing projects using Arduino.',
+      technologies: ['C++', 'Microcontrollers', 'Arduino / basic embedded systems'],
+      description: 'Started exploring programming and hardware during 12th grade, learning C++ fundamentals and working with microcontrollers and basic embedded projects.',
     },
     {
       year: '2024',
-      technologies: ['Streamlit', 'GenAI APIs', 'PostgreSQL', 'MongoDB', 'Javascript'],
-      description: 'Dove into web development and databases.',
+      technologies: ['Python', 'HTML', 'CSS', 'JavaScript'],
+      description: 'Expanded from basic programming into web development while continuing to strengthen programming fundamentals through Python and frontend technologies.',
     },
     {
       year: '2025',
-      technologies: ['RPA + AI integrations', 'Deep Learning', 'Machine Learning', 'Data Visualization & Analytics'],
-      description: 'Focusing on advanced AI integrations, automation and data analysis and representation.',
+      technologies: [
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Vite',
+        'Tailwind CSS',
+        'Node.js',
+        'Express',
+        'SQL',
+        'PostgreSQL',
+        'MySQL',
+        'Supabase',
+      ],
+      description: 'Focused on full-stack development, building practical applications with modern frontend technologies, backend APIs, and relational databases.',
+    },
+    {
+      year: '2026',
+      technologies: [
+        'Java',
+        'Spring Boot',
+        'AWS',
+        'Git',
+        'GitHub',
+        'Postman',
+        'Vercel',
+        'Render',
+        'IntelliJ IDEA',
+        'Pandas',
+        'NumPy',
+      ],
+      description: 'Currently strengthening backend and professional development skills with Java and Spring Boot while expanding into cloud, APIs, development tooling, and production-oriented practices.',
     },
   ],
 
   education: [
     {
-      degree: 'Bachelor of Engineering in Computer Engineering',
-      institution: 'Your University',
-      period: '2022 – 2026',
+      degree: 'Bachelor of Science in Computer Science',
+      institution: 'University of Mumbai — JVM Mehta College, Navi Mumbai',
+      period: '2024 – Present',
       details: [
         'Coursework: Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks, AI & Machine Learning.',
+        'Focus: Building practical full-stack applications (StashBox, SubTrack), backend development with Java & Spring Boot, relational databases & Supabase, and cloud deployment on AWS, Vercel & Render.',
         'Active contributor to collegiate coding events and tech symposiums.',
       ],
     },
     {
-      degree: 'Higher Secondary Certificate (HSC) - Science',
-      institution: 'Your Junior College / High School',
-      period: '2020 – 2022',
+      degree: 'Higher Secondary Certificate (HSC) – Science',
+      institution: 'S.D.V. Jr. College, Navi Mumbai',
+      period: '2022 – 2024',
       details: [
         'Subjects: Physics, Chemistry, Mathematics, Computer Science.',
-        'Graduated with distinction and honors.',
+        'Built foundational programming skills with C++',
+        'Explored microcontrollers and basic embedded systems',
+        'Developed an early interest in computer science through practical programming and technology projects',
       ],
     },
   ],
 
-  experience: [
-    {
-      title: 'Software Engineering Intern',
-      company: 'Tech Solutions Inc.',
-      period: 'Jun 2024 – Aug 2024',
-      description: 'Worked on front-end development and API integrations for enterprise analytics dashboards.',
-      details: [
-        'Built responsive web views in React and integrated REST APIs.',
-        'Collaborated on database query optimization and performance testing.',
-      ],
-      technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Git'],
-    },
-  ],
+  experience: [],
 
-  positionsOfResponsibility: [
-    {
-      title: 'Technical Head',
-      organization: 'Computer Society Chapter',
-      period: '2024 – Present',
-      description: 'Spearheaded technical events, coding contests, and workshops for over 200+ students.',
-    },
-  ],
+  positionsOfResponsibility: [],
 
   spokenLanguages: [
     { name: 'English', proficiency: 'Professional Working', flag: '🇬🇧' },
     { name: 'Hindi', proficiency: 'Full Professional', flag: '🇮🇳' },
-    { name: 'Regional / Other', proficiency: 'Native / Conversational', flag: '🌐' },
+    { name: 'Marathi', proficiency: 'Native / Conversational', flag: '🇮🇳' },
   ],
 
   beyondWork: [
-    { name: 'Football', description: 'Following European football and playing weekly matches.', emoji: '⚽' },
-    { name: 'Music', description: 'Listening to synth-wave, R&B, and soundtrack scores.', emoji: '🎧' },
-    { name: 'Gaming', description: 'Enjoying immersive story and strategy games.', emoji: '🎮' },
+    { name: 'Sports', description: 'Following sports matches, fitness, and staying active.' },
+    { name: 'Music', description: 'Listening to synth-wave, R&B, and soundtrack scores.' },
+    { name: 'Gaming', description: 'Enjoying immersive story and strategy games.' },
   ],
 
   // ===========================================================================

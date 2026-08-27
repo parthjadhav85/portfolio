@@ -50,8 +50,8 @@ const Skills = () => {
                     <span className="cert-dot-bullet" aria-hidden="true" />
                     <div className="cert-entry-content">
                       <h4 className="cert-entry-title">{item.title}</h4>
-                      {item.organization && (
-                        <p className="cert-entry-org">{item.organization}</p>
+                      {(item.description || item.organization) && (
+                        <p className="cert-entry-org">{item.description || item.organization}</p>
                       )}
                     </div>
                   </li>

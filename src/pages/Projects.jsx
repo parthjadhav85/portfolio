@@ -63,7 +63,7 @@ const Projects = () => {
                 {/* Description */}
                 <p className="project-card-description">{project.description}</p>
 
-                {/* Action Buttons: View GitHub & View Report */}
+                {/* Action Buttons: View GitHub & Live Demo */}
                 <div className="project-action-buttons">
                   {project.github && (
                     <a
@@ -78,13 +78,26 @@ const Projects = () => {
                     </a>
                   )}
 
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-outline-action"
+                      aria-label={`Live Demo for ${project.title}`}
+                    >
+                      <span>Live Demo</span>
+                      <FiExternalLink size={16} />
+                    </a>
+                  )}
+
                   {project.report && (
                     <a
                       href={project.report}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-outline-action"
-                      aria-label={`View report or live demo for ${project.title}`}
+                      aria-label={`View report for ${project.title}`}
                     >
                       <span>View Report</span>
                       <FiExternalLink size={16} />

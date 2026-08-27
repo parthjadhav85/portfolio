@@ -260,7 +260,7 @@ input, textarea {
   max-width: 720px;
 }
 
-/* ===== 1. NAVBAR (Always Transparent Floating Navigation) ===== */
+/* ===== 1. NAVBAR (Continuous Scroll-Progress Glass/Blur) ===== */
 .site-header {
   position: fixed;
   top: 0;
@@ -269,20 +269,11 @@ input, textarea {
   height: var(--nav-height);
   z-index: 50;
   background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   border-bottom: 1px solid transparent;
   box-shadow: none;
-}
-
-.site-header-scrolled {
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
-  box-shadow: none;
-}
-
-html.dark .site-header-scrolled {
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
-  box-shadow: none;
+  will-change: background-color, backdrop-filter;
 }
 
 .header-inner {
@@ -494,9 +485,7 @@ html.dark .site-header-scrolled {
   color: var(--color-ink);
 }
 
-/* ===== 3. BUTTONS (Vercel Button System) ===== */
-
-/* Marketing Primary CTA: Black Pill (button-primary in DESIGN.md) */
+/* Marketing Pill CTA Buttons */
 .btn-outline-teal {
   display: inline-flex;
   align-items: center;
@@ -504,34 +493,24 @@ html.dark .site-header-scrolled {
   gap: 0.5rem;
   padding: 0 1.5rem;
   height: 48px;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  border: 1px solid var(--color-primary);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
   border-radius: var(--radius-pill);
   font-weight: 500;
   font-size: 0.9375rem;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
-}
-
-.btn-outline-teal:hover {
-  background-color: rgba(23, 23, 23, 0.88);
-  opacity: 0.92;
-  transform: translateY(-1px);
-}
-
-/* Second Marketing CTA: White Pill with Hairline (button-secondary) */
-.btn-outline-teal:nth-of-type(2) {
-  background-color: var(--color-canvas);
-  color: var(--color-ink);
-  border: 1px solid var(--color-hairline);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-.btn-outline-teal:nth-of-type(2):hover {
+.btn-outline-teal:hover {
   background-color: var(--color-canvas-soft);
   border-color: var(--color-hairline-strong);
+  color: var(--color-ink);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-level-2);
 }
 
 /* Compact In-App Action Button (button-secondary-sm) */
@@ -877,13 +856,12 @@ html.dark .site-header-scrolled {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .project-card-container:hover {
   border-color: var(--color-hairline-strong);
   box-shadow: var(--shadow-level-3);
-  transform: translateY(-2px);
 }
 
 .project-img-frame {
@@ -1338,14 +1316,14 @@ html.dark .site-header-scrolled {
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-level-2);
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   display: flex;
   flex-direction: column;
 }
 
 .journey-card-box:hover {
   border-color: var(--color-hairline-strong);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-level-3);
 }
 
 .journey-year-pill {
@@ -1404,6 +1382,12 @@ html.dark .site-header-scrolled {
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-level-2);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about-detail-card:hover {
+  border-color: var(--color-hairline-strong);
+  box-shadow: var(--shadow-level-3);
 }
 
 .about-card-header-flex {
@@ -1490,18 +1474,21 @@ html.dark .site-header-scrolled {
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-level-2);
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .icon-badge-card:hover {
   border-color: var(--color-hairline-strong);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-level-3);
 }
 
 .badge-card-icon {
   font-size: 1.75rem;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 0.75rem;
+  color: var(--color-ink);
+  height: 28px;
 }
 
 .badge-card-title {
