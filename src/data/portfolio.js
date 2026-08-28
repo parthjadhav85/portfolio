@@ -207,7 +207,7 @@ const portfolioData = {
     {
       type: 'LeetCode',
       value: 'leetcode.com/u/3eeQeHbIv6',
-      link: 'https://leetcode.com/u/3eeQeHbIv6/',
+      link: 'https://leetcode.com/u/parthjadhav85/',
       icon: 'code',
     },
     {
